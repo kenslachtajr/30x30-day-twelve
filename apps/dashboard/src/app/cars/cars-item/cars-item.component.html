@@ -1,0 +1,24 @@
+<div *ngIf="car$ | async as car" class="container-fixed container w-100">
+  <div class="card-wrapper">
+    <mat-card
+      class="d-flex justify-content-center flex-column align-items-center"
+    >
+      <mat-card-header>
+        <mat-card-title>
+          <p class="text-center">{{ car.make }}</p>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <p class="text-center">{{ car.model }}</p>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="m-auto">
+        <p class="m-0 mr-3 text-center">Max Speed: {{ car.maxSpeed }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="goBackToCars()">
+          <mat-icon>reply</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

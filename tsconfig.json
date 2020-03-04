@@ -15,7 +15,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ngrx-cars/core-data": ["libs/core-data/src/index.ts"],
+      "@ngrx-cars/core-state": ["libs/core-state/src/index.ts"],
+      "@ngrx-cars/material": ["libs/material/src/index.ts"],
+      "@ngrx-cars/ui-library": ["libs/ui-library/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

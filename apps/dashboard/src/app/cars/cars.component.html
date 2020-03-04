@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-50">
+    <ngrx-cars-cars-list
+      [cars]="cars$ | async"
+      (selected)="selectCar($event)"
+      (deleted)="deleteCar($event)"
+    ></ngrx-cars-cars-list>
+  </div>
+  <div class="col-50">
+    <ngrx-cars-cars-details
+      [form]="form"
+      [car]="selectedCar"
+      (saved)="saveCar($event)"
+      (cancelled)="resetCar()"
+    >
+    </ngrx-cars-cars-details>
+  </div>
+</div>

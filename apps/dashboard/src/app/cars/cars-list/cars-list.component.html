@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Cars</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let car of cars" (click)="selected.emit(car)">
+        <h3 mat-line class="car">
+          {{car.make}}
+        </h3>
+        <p mat-line>
+          {{car.model}}
+        </p>
+        <button mat-icon-button (click)="deleted.emit(car);$event.stopImmediatePropagation()">
+          <mat-icon>close</mat-icon>
+        </button>
+        <button mat-icon-button (click)="$event.stopImmediatePropagation()" [routerLink]="car.id">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
